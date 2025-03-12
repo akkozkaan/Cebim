@@ -1,6 +1,6 @@
 # Cebim - Bütçe ve Finans Takip Uygulaması
 
-**Proje Tanımı:** Cebim, kişisel finans yönetimini daha verimli ve bilinçli hale getirmek için tasarlanmış bir bütçe ve harcama takip uygulamasıdır. Kullanıcılar, gelirlerini ve giderlerini kategorize ederek, her bir harcamanın bir amacı olması gerektiğini savunan YNAB ile bütçelerini daha sıkı bir şekilde yönetebilirler. YNAB, kullanıcılara finansal hedeflerine ulaşmaları için yol gösterir ve her bir doların nereye gittiğini açıkça gösterir. Uygulama, kullanıcıların harcama alışkanlıklarını iyileştirerek tasarruf yapmalarına, borçlarını azaltmalarına ve finansal güvenliklerini artırmalarına yardımcı olur.
+**Proje Tanımı:** Cebim, kişisel finans yönetimini daha verimli ve bilinçli hale getirmek için tasarlanmış bir bütçe ve harcama takip uygulamasıdır. Kullanıcılar, gelirlerini ve giderlerini kategorize ederek, her bir harcamanın bir amacı olması gerektiğini savunan YNAB ile bütçelerini daha sıkı bir şekilde yönetebilirler. YNAB, kullanıcılara finansal hedeflerine ulaşmaları için yol gösterir ve her bir liranın nereye gittiğini açıkça gösterir. Uygulama, kullanıcıların harcama alışkanlıklarını iyileştirerek tasarruf yapmalarına, borçlarını azaltmalarına ve finansal güvenliklerini artırmalarına yardımcı olur.
 
 **Proje Kategorisi:** Projenin hangi alanda yapıldığını belirten bir kategori. Örnek: E-Ticaret, Sosyal Medya vb. 
 
