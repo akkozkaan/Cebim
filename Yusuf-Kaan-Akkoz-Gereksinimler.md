@@ -25,5 +25,5 @@ Kullanıcıların her ayın sonunda gelir ve giderlerini, bütçelerini ne kadar
 9. Kişisel Finans Blog ve Makaleler (Yusuf Kaan Akkoz)
 Kullanıcıların finansal okuryazarlıklarını artırmaları amacıyla kişisel finans hakkında yazılmış blog yazıları ve makalelere erişim sağlar. Bu içerikler, finansal yönetim, yatırım yapma ve bütçeleme gibi konularda kullanıcılara bilgiler sunar, böylece uygulamanın eğitimsel yönünü güçlendirir.
 
-10. Verilerini İndirebilme (Yusuf Kaan Akkoz)
-Kullanıcıların harcama, gelir ve bütçe verilerini CSV, Excel veya PDF gibi formatlarda dışa aktarabilmesini sağlar. Bu özellik, kullanıcıların verilerini daha derinlemesine analiz etmelerini veya başka bir platformda kullanmalarını kolaylaştırır. Ayrıca, verilerin yedeklenmesi veya paylaşılması gerektiğinde büyük kolaylık sağlar.
+10. Harcamaları ve Gelirleri Güncelleme (Yusuf Kaan Akkoz)
+Kullanıcıların harcama, gelir ve bütçe verilerini girdikten sonra daha sonra tekrardan güncellemelerine ve değiştirmelerine oloanak sağlar.
