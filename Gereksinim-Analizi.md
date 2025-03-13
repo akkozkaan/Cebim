@@ -10,7 +10,7 @@ Tüm gereksinimlerinizi çıkardıktan sonra beraber tartışıyoruz ve son gere
 7. Ödeme Hatırlatıcıları Ekleme (Yusuf Kaan Akkoz)
 8. Aylık Rapor Görüntüleme (Yusuf Kaan Akkoz)
 9. Kişisel Finans Blog ve Makaleler (Yusuf Kaan Akkoz)
-10. Verilerini İndirebilme (Yusuf Kaan Akkoz)
+10. Harcamaları ve Gelirleri Güncelleme (Yusuf Kaan Akkoz)
 
 # Gereksinim Dağılımları
 1. [Yusuf Kaan Akkoz'un Gereksinimleri](Yusuf-Kaan-Akkoz-Gereksinimler.md)
