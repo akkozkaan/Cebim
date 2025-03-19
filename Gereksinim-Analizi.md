@@ -8,7 +8,7 @@ Tüm gereksinimlerinizi çıkardıktan sonra beraber tartışıyoruz ve son gere
 5. Aylık Kazanç Hedefleme (Yusuf Kaan Akkoz)
 6. Kazanç Durumunu Görüntüleme (Yusuf Kaan Akkoz)
 7. Ödeme Hatırlatıcıları Ekleme (Yusuf Kaan Akkoz)
-8. Navigasyon Bar Ekleme (Yusuf Kaan Akkoz)
+8. Aylık Kazanç ile Mevcut Durum Karşılaştırma (Yusuf Kaan Akkoz)
 9. Kişisel Finans Blog ve Makaleler (Yusuf Kaan Akkoz)
 10. Harcamaları ve Gelirleri Güncelleme (Yusuf Kaan Akkoz)
 
