@@ -5,7 +5,7 @@ Tüm gereksinimlerinizi çıkardıktan sonra beraber tartışıyoruz ve son gere
 2. Giriş Yapma (Yusuf Kaan Akkoz)
 3. Gelir ve Gider Kategorisi Oluşturma (Yusuf Kaan Akkoz)
 4. Harcamaları ve Gelirleri Kaydetme (Yusuf Kaan Akkoz)
-5. Aylık Kazanç Hedefleme (Yusuf Kaan Akkoz)
+5. Aylık Kazanç Hedefi Belirle (Yusuf Kaan Akkoz)
 6. Kazanç Durumunu Görüntüleme (Yusuf Kaan Akkoz)
 7. Ödeme Hatırlatıcıları Ekleme (Yusuf Kaan Akkoz)
 8. Aylık Kazanç ile Mevcut Durum Karşılaştırma (Yusuf Kaan Akkoz)
