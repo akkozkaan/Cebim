@@ -1,0 +1,18 @@
+# Node.js imajını kullan
+FROM node:18-alpine
+
+# Çalışma dizini belirle
+WORKDIR /app
+
+# Bağımlılıkları kopyala ve yükle
+COPY package.json .
+RUN npm install
+
+# Kodları kopyala
+COPY . .
+
+# Sunucuyu başlat
+CMD ["node", "server.js"]
+
+# Portu dinle
+EXPOSE 5000

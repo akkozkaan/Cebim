@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #343a40; /* Dark background */
+  color: #fff; /* White text */
+  width: 250px;
+  height: 100vh;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push the "Log In" button to the bottom */
+}
+
+.sidebar-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #495057; /* Slightly lighter background on hover */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  background-color: #007bff; /* Highlight active link */
+  color: #fff;
+}
+
+.logout-button {
+  background-color: #dc3545; /* Red background for logout */
+  color: #fff;
+  width: 250px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px; /* Reduced margin to move the button upward */
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.main-content {
+  margin-left: 250px; /* Offset for the sidebar */
+  padding: 20px;
+  flex: 1;
+}

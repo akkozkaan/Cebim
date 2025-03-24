@@ -1,0 +1,21 @@
+# Node.js imajını kullan
+FROM node:18-alpine
+
+# Çalışma dizini belirle
+WORKDIR /app
+
+# Bağımlılıkları kopyala ve yükle
+COPY package.json .
+RUN npm install
+
+# Kodları kopyala
+COPY . .
+
+# Build işlemini gerçekleştir
+RUN npm run build
+
+# Next.js uygulamasını başlat
+CMD ["npm", "start"]
+
+# Portu dinle
+EXPOSE 3000
