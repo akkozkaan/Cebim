@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
     <div className="flex flex-col w-64 bg-gray-800 h-screen fixed left-0">
       <div className="flex items-center justify-center h-16 bg-gray-900">
-        <span className="text-white text-xl font-semibold">My Dashboard</span>
+        <span className="text-white text-xl font-semibold">Cebim</span>
       </div>
       <nav className="mt-5 flex-1">
         <div className="space-y-1 px-2">
