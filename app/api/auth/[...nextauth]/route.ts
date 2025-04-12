@@ -13,8 +13,8 @@ const handler = NextAuth({
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      // Redirect to main page after login
-      return baseUrl + "/main";
+      // Redirect to dashboard after login
+      return baseUrl + "/dashboard/income";
     },
   },
 });
