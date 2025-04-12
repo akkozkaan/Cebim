@@ -9,36 +9,73 @@ interface Transaction {
   description: string;
   type: 'income' | 'outcome';
   date: string;
+  categoryName: string;
 }
 
 interface TransactionManagerProps {
   categoryId: string;
   categoryName: string;
+  onTransactionUpdate?: () => void;
 }
 
-export default function TransactionManager({ categoryId, categoryName }: TransactionManagerProps) {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+// Create a key for localStorage based on categoryId
+const getStorageKey = (categoryId: string) => `transactions_${categoryId}`;
+
+export default function TransactionManager({ categoryId, categoryName, onTransactionUpdate }: TransactionManagerProps) {
+  // Initialize transactions from localStorage if available
+  const [transactions, setTransactions] = useState<Transaction[]>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem(getStorageKey(categoryId));
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
+  });
   const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
   const [type, setType] = useState<'income' | 'outcome'>('income');
 
-  const addTransaction = () => {
-    if (amount && description) {
-      const newTransaction: Transaction = {
-        id: Date.now().toString(),
-        amount: parseFloat(amount),
-        description: description.trim(),
-        type,
-        date: new Date().toISOString(),
-      };
-      setTransactions([...transactions, newTransaction]);
-      setAmount('');
-      setDescription('');
+  // Save transactions to localStorage whenever they change
+  const saveTransactions = (newTransactions: Transaction[]) => {
+    setTransactions(newTransactions);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(getStorageKey(categoryId), JSON.stringify(newTransactions));
     }
   };
 
+  const addTransaction = () => {
+    if (!amount || !description) return;
+
+    const newTransaction: Transaction = {
+      id: Date.now().toString(),
+      amount: parseFloat(amount),
+      description,
+      type,
+      date: new Date().toISOString(),
+      categoryName
+    };
+
+    const updatedTransactions = [...transactions, newTransaction];
+    saveTransactions(updatedTransactions);
+    
+    // Dispatch a custom event to notify parent components
+    window.dispatchEvent(new Event('transactionUpdated'));
+    // Call the callback if provided
+    onTransactionUpdate?.();
+
+    // Reset form
+    setAmount('');
+    setDescription('');
+    setType('income');
+  };
+
   const deleteTransaction = (id: string) => {
-    setTransactions(transactions.filter(t => t.id !== id));
+    const updatedTransactions = transactions.filter(t => t.id !== id);
+    saveTransactions(updatedTransactions);
+    
+    // Dispatch a custom event to notify parent components
+    window.dispatchEvent(new Event('transactionUpdated'));
+    // Call the callback if provided
+    onTransactionUpdate?.();
   };
 
   const total = transactions.reduce((sum, t) => 
@@ -95,13 +132,18 @@ export default function TransactionManager({ categoryId, categoryName }: Transac
           {transactions.map(transaction => (
             <div key={transaction.id} className="flex items-center justify-between p-2 bg-gray-50 rounded">
               <div>
-                <span className="font-medium">${transaction.amount.toFixed(2)}</span>
-                <span className={`ml-2 text-sm ${
-                  transaction.type === 'income' ? 'text-green-600' : 'text-red-600'
-                }`}>
-                  ({transaction.type})
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-medium">${transaction.amount.toFixed(2)}</span>
+                  <span className={`text-sm ${
+                    transaction.type === 'income' ? 'text-green-600' : 'text-red-600'
+                  }`}>
+                    ({transaction.type})
+                  </span>
+                </div>
                 <p className="text-sm text-gray-600">{transaction.description}</p>
+                <p className="text-xs text-gray-500">
+                  {new Date(transaction.date).toLocaleDateString()} - {transaction.categoryName}
+                </p>
               </div>
               <button
                 onClick={() => deleteTransaction(transaction.id)}
