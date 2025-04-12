@@ -13,8 +13,10 @@ const handler = NextAuth({
   },
   callbacks: {
     async redirect({ baseUrl }) {
-      // Redirect to dashboard after login
-      return baseUrl + "/dashboard/income";
+      // Ensure we're using the correct base URL in production
+      const productionBaseUrl = "https://cebimfinal.vercel.app";
+      const finalBaseUrl = process.env.NODE_ENV === "production" ? productionBaseUrl : baseUrl;
+      return `${finalBaseUrl}/dashboard/income`;
     },
   },
 });
