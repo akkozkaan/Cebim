@@ -12,7 +12,7 @@ const handler = NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async redirect({ url, baseUrl }) {
+    async redirect({ baseUrl }) {
       // Redirect to dashboard after login
       return baseUrl + "/dashboard/income";
     },
