@@ -58,7 +58,7 @@ export default function LoginPage() {
               />
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">
-              Cebim'e Hoş Geldiniz
+              Cebim&apos;e Hoş Geldiniz
             </h2>
             <p className="text-gray-300">
               Finansınızı kolayca yönetin
