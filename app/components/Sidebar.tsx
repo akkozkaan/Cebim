@@ -10,9 +10,9 @@ import {
 } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Income', href: '/dashboard/income', icon: BanknotesIcon },
-  { name: 'Goals', href: '/dashboard/goals', icon: ChartBarIcon },
-  { name: 'Reminders', href: '/dashboard/reminders', icon: BellIcon },
+  { name: 'Gelir/Gider', href: '/dashboard/income', icon: BanknotesIcon },
+  { name: 'Hedef', href: '/dashboard/goals', icon: ChartBarIcon },
+  { name: 'Hatırlatıcılar', href: '/dashboard/reminders', icon: BellIcon },
 ];
 
 function classNames(...classes: string[]) {
