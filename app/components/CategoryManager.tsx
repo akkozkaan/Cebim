@@ -318,7 +318,7 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
                 </div>
               ))
             ) : (
-              <p className="text-center text-gray-500 py-4">No transactions yet.</p>
+              <p className="text-center text-gray-500 py-4">No transactions yet..</p>
             )}
           </div>
         </div>

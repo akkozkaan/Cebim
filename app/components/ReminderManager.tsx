@@ -112,14 +112,14 @@ export default function ReminderManager() {
     <div className="space-y-6">
       <div className="bg-white rounded-lg shadow p-6">
         <h3 className="text-lg font-medium text-gray-900 mb-4">
-          {editingId ? 'Edit Reminder' : 'Add New Reminder'}
+          {editingId ? 'Hatırlatıcıyı Düzenle' : 'Yeni Hatırlatıcı Ekle'}
         </h3>
         
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-                Title
+                Başlık
               </label>
               <input
                 type="text"
@@ -127,12 +127,12 @@ export default function ReminderManager() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Rent Payment"
+                placeholder="Kira Ödemesi"
               />
             </div>
             <div>
               <label htmlFor="amount" className="block text-sm font-medium text-gray-700">
-                Amount
+                Miktar
               </label>
               <input
                 type="number"
@@ -150,7 +150,7 @@ export default function ReminderManager() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="dueDate" className="block text-sm font-medium text-gray-700">
-                Due Date
+                Hatırlatıcı Tarihi
               </label>
               <input
                 type="date"
@@ -162,7 +162,7 @@ export default function ReminderManager() {
             </div>
             <div>
               <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-                Description
+                Açıklama
               </label>
               <input
                 type="text"
@@ -170,7 +170,7 @@ export default function ReminderManager() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Optional description"
+                placeholder="Bu ayın kira ödemesi"
               />
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function ReminderManager() {
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <label htmlFor="isRecurring" className="ml-2 text-sm text-gray-700">
-                Recurring Payment
+                Tekrar eden ödeme
               </label>
             </div>
             
@@ -195,8 +195,8 @@ export default function ReminderManager() {
                 onChange={(e) => setFrequency(e.target.value as 'monthly' | 'yearly')}
                 className="rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               >
-                <option value="monthly">Monthly</option>
-                <option value="yearly">Yearly</option>
+                <option value="monthly">Aylık</option>
+                <option value="yearly">Yıllık</option>
               </select>
             )}
           </div>
@@ -208,13 +208,13 @@ export default function ReminderManager() {
                   onClick={resetForm}
                   className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
                 >
-                  Cancel
+                  İptal et
                 </button>
                 <button
                   onClick={saveEdit}
                   className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700"
                 >
-                  Save Changes
+                  Kaydet
                 </button>
               </div>
             ) : (
@@ -223,7 +223,7 @@ export default function ReminderManager() {
                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700"
               >
                 <PlusIcon className="h-5 w-5 mr-2" />
-                Add Reminder
+                Ekle
               </button>
             )}
           </div>
@@ -232,7 +232,7 @@ export default function ReminderManager() {
 
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Payment Reminders</h3>
+          <h3 className="text-lg font-medium text-gray-900 mb-4">Ödeme Hatırlatıcıları</h3>
           <div className="space-y-4">
             {sortedReminders.length > 0 ? (
               sortedReminders.map(reminder => (
@@ -256,7 +256,7 @@ export default function ReminderManager() {
                       <p className="text-sm text-gray-600">{reminder.description}</p>
                     )}
                     <p className="text-sm text-gray-500">
-                      Due: {new Date(reminder.dueDate).toLocaleDateString()}
+                      Son tarih: {new Date(reminder.dueDate).toLocaleDateString()}
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
@@ -277,7 +277,7 @@ export default function ReminderManager() {
               ))
             ) : (
               <p className="text-center text-gray-500 py-4">
-                No payment reminders yet. Add your first reminder above.
+                Henüz ödeme hatırlatıcınız yok. Yeni bir hatırlatıcı ekleyin.
               </p>
             )}
           </div>

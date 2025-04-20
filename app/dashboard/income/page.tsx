@@ -18,6 +18,7 @@ interface Category {
   name: string;
 }
 
+
 const CATEGORIES_STORAGE_KEY = 'income_categories';
 
 export default function IncomePage() {
@@ -183,7 +184,7 @@ export default function IncomePage() {
       <div className="md:col-span-1 space-y-4">
         {/* Category Management */}
         <div className="bg-white p-4 rounded-lg shadow">
-          <h2 className="text-lg font-medium text-gray-900 mb-4">Categories</h2>
+          <h2 className="text-lg font-medium text-gray-900 mb-4">Kategoriler</h2>
           
           {/* Add Category */}
           <div className="space-y-2 mb-4">
@@ -191,7 +192,7 @@ export default function IncomePage() {
               type="text"
               value={newCategoryName}
               onChange={(e) => setNewCategoryName(e.target.value)}
-              placeholder="New category name"
+              placeholder="Yeni kategori ekle (örnek: Faturalar)"
               className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               onKeyPress={(e) => e.key === 'Enter' && addCategory()}
             />
@@ -200,7 +201,7 @@ export default function IncomePage() {
               className="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
               <PlusIcon className="h-5 w-5 mr-2" />
-              Add Category
+              Kategori Ekle
             </button>
           </div>
 
@@ -268,7 +269,7 @@ export default function IncomePage() {
         {selectedCategory && (
           <div className="bg-white p-4 rounded-lg shadow">
             <h2 className="text-lg font-medium text-gray-900 mb-4">
-              Add Transaction - {selectedCategory.name}
+              İşlem Ekle - {selectedCategory.name}
             </h2>
             <div className="space-y-4">
               <div>
@@ -288,7 +289,7 @@ export default function IncomePage() {
               </div>
               <div>
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-                  Description
+                  Açıklama
                 </label>
                 <input
                   type="text"
@@ -309,15 +310,15 @@ export default function IncomePage() {
                   onChange={(e) => setNewTransaction({ ...newTransaction, type: e.target.value as 'income' | 'outcome' })}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 >
-                  <option value="income">Income</option>
-                  <option value="outcome">Outcome</option>
+                  <option value="income">Gelir</option>
+                  <option value="outcome">Gider</option>
                 </select>
               </div>
               <button
                 onClick={addTransaction}
                 className="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Add Transaction
+                İşlem Ekle
               </button>
             </div>
           </div>
@@ -328,7 +329,7 @@ export default function IncomePage() {
       <div className="md:col-span-2 space-y-6">
         {/* Total Balance */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-xl font-medium text-gray-900 mb-2">Total Balance</h2>
+          <h2 className="text-xl font-medium text-gray-900 mb-2">Toplam Bakiye</h2>
           <p className={`text-3xl font-bold ${totalBalance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
             ${totalBalance.toFixed(2)}
           </p>
@@ -336,7 +337,7 @@ export default function IncomePage() {
 
         {/* Category Balances */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-xl font-medium text-gray-900 mb-4">Category Balances</h2>
+          <h2 className="text-xl font-medium text-gray-900 mb-4">Kategori Bakiyeleri</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {categories.map(category => (
               <div
@@ -356,7 +357,7 @@ export default function IncomePage() {
 
         {/* Recent Transactions */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-xl font-medium text-gray-900 mb-4">Recent Transactions</h2>
+          <h2 className="text-xl font-medium text-gray-900 mb-4">Son İşlemler</h2>
           <div className="space-y-2">
             {transactions.length > 0 ? (
               transactions.map(transaction => (
@@ -387,7 +388,7 @@ export default function IncomePage() {
                 </div>
               ))
             ) : (
-              <p className="text-center text-gray-500 py-4">No transactions yet.</p>
+              <p className="text-center text-gray-500 py-4">Henüz işlemin yok.</p>
             )}
           </div>
         </div>
