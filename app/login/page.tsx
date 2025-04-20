@@ -102,7 +102,7 @@ export default function LoginPage() {
               <a href="#" className="font-medium text-blue-400 hover:text-blue-300">
                 Gizlilik Politikası
               </a>{" "}
-              'nı kabul etmiş olursunuz
+              &apos;nı kabul etmiş olursunuz
             </p>
           </div>
         </div>
