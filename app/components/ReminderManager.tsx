@@ -212,7 +212,7 @@ export default function ReminderManager() {
                 </button>
                 <button
                   onClick={saveEdit}
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700"
+                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 border border-transparent rounded-md"
                 >
                   Kaydet
                 </button>
@@ -220,7 +220,7 @@ export default function ReminderManager() {
             ) : (
               <button
                 onClick={addReminder}
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 border border-transparent rounded-md"
               >
                 <PlusIcon className="h-5 w-5 mr-2" />
                 Ekle

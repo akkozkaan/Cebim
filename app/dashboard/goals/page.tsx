@@ -126,7 +126,7 @@ export default function GoalsPage() {
             />
             <button
               onClick={saveGoal}
-              className="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
             >
               <PlusIcon className="h-5 w-5 mr-2" />
               {monthlyGoal === null ? 'Hedefi kur' : 'Hedefi Güncelle'}

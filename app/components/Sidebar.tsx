@@ -23,7 +23,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="fixed inset-y-0 left-0 w-64 bg-gray-800">
+    <div className="fixed inset-y-0 left-0 w-64 bg-gradient-to-b from-indigo-900 to-purple-900">
       <div className="flex h-full flex-col">
         <div className="flex flex-shrink-0 items-center justify-center h-16 border-b border-gray-700">
           <Link href="/dashboard/income">

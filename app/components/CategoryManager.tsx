@@ -160,7 +160,7 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
       {/* Left Column - Category Management */}
       <div className="md:col-span-1 space-y-4">
         <div className="bg-white p-4 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Manage Categories</h3>
+          <h3 className="text-lg font-medium text-gray-900 mb-4">Kategori Yönetimi</h3>
           <div className="space-y-4">
             {/* Add Category Input */}
             <div className="space-y-2">
@@ -174,10 +174,10 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
               />
               <button
                 onClick={addCategory}
-                className="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                className="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
               >
                 <PlusIcon className="h-5 w-5 mr-2" />
-                Add Category
+                Kategori Ekle
               </button>
             </div>
 
@@ -249,7 +249,7 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
         {selectedCategoryId && (
           <div className="bg-white p-4 rounded-lg shadow">
             <h3 className="text-lg font-medium text-gray-900 mb-4">
-              Add Transaction - {categories.find(c => c.id === selectedCategoryId)?.name}
+              İşlem Ekle - {categories.find(c => c.id === selectedCategoryId)?.name}
             </h3>
             <TransactionManager
               key={selectedCategoryId}
@@ -265,7 +265,7 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
       <div className="md:col-span-2 space-y-6">
         {/* Total Balance */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-xl font-medium text-gray-900 mb-2">Total Balance</h3>
+          <h3 className="text-xl font-medium text-gray-900 mb-2">Toplam Bakiye</h3>
           <p className={`text-3xl font-bold ${totalBalance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
             ${totalBalance.toFixed(2)}
           </p>
@@ -273,7 +273,7 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
 
         {/* Category Balances Grid */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-xl font-medium text-gray-900 mb-4">Category Balances</h3>
+          <h3 className="text-xl font-medium text-gray-900 mb-4">Kategori Bakiyeleri</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {categories.map(category => (
               <div
@@ -293,7 +293,7 @@ export default function CategoryManager({ onSelectCategory }: CategoryManagerPro
 
         {/* Recent Transactions */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-xl font-medium text-gray-900 mb-4">Recent Transactions</h3>
+          <h3 className="text-xl font-medium text-gray-900 mb-4">Son işlemler</h3>
           <div className="space-y-2">
             {transactions.length > 0 ? (
               transactions.map(transaction => (
